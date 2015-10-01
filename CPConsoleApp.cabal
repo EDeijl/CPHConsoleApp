@@ -15,11 +15,54 @@ build-type:          Simple
 -- extra-source-files:  
 cabal-version:       >=1.10
 
+
+Flag ios
+      Description: build for iOS
+      Default: False
+
 library
   -- exposed-modules:     
   -- other-modules:       
   -- other-extensions:    
-  build-depends:       base >=4.8 && <4.9
+  build-depends:       base >=4.7 
   hs-source-dirs:      src
   default-language:    Haskell2010
+  exposed: True
+
+executable             CPConsoleAppStaticLib
+  hs-source-dirs:        src
+  default-language:      Haskell2010
+  ghc-options:           -staticlib -threaded -no-hs-main -pgmlibtool libtool -stubdir .
+  cpp-options:           -DIOS
+  main-is:               Main.hs
+
+  build-depends: base
+  if flag(ios)
+     Buildable: True
+  else
+    Buildable: False
+
+executable           CPConsoleApp
+  hs-source-dirs:      src
+  default-language:    Haskell2010
+  ghc-options:         -W -threaded -O2
+  ghc-prof-options:    -prof -auto-all
+  main-is:             Main.hs
+  hs-source-dirs:      .
+  build-depends: base
+  if flag(ios)
+     ghc-options: -staticlib
+
+  if flag(ios)
+     Buildable: False
+  else
+    Buildable: True
+
+
+
+
+                      
+
+
+
 
