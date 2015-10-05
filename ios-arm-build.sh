@@ -12,7 +12,7 @@ fi
 
 $ARCH_OS-cabal configure -fios $@ && \
     $ARCH_OS-cabal build exe:CPConsoleAppStaticLib
-[ $? -Eq 0 ] || exit 1
+[ $? -eq 0 ] || exit 1
 
 echo
 echo Copying to CPConsoleApp to $XCODE_PROJECT_BUILD_DIR

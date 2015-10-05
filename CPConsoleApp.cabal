@@ -35,15 +35,14 @@ library
   if flag(android)
      cpp-options:         -DANDROID
      cc-options:          -DANDROID
-
-  if flag(android)
-     ghc-options:         -O2 -static
+     ghc-options:         -O2 -static -no-hs-main -threaded -optl-shared
      Buildable:           True
      build-depends:       base >= 4.7
+                        , foreign-jni
+     c-sources:           src/init.c
+
 
      
-
-
 executable             CPConsoleAppStaticLib
   hs-source-dirs:        src
   default-language:      Haskell2010
@@ -72,10 +71,6 @@ executable           CPConsoleApp
      Buildable: False
   else
     Buildable: True
-
-
-
-
                       
 
 

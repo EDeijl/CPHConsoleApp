@@ -1,11 +1,17 @@
 {-# LANGUAGE ForeignFunctionInterface #-}
-module Counter where
-import Control.Concurrent
-import Control.Monad
-foreign export ccall startCounter :: Int -> IO ()
-startCounter :: Int -> IO ()
-startCounter = void . forkIO . void . loop
-    where loop i = do
-            putStrLn (replicate i 'o')
-            threadDelay (10^6)
-            loop (i + 1)
+module Main where
+
+import Foreign.JNI
+import Foreign.JNI.Lookup
+
+main :: IO ()
+main = helloWorld
+
+
+foreign export ccall helloWorld :: IO ()
+helloWorld :: IO ()
+helloWorld = putStrLn "Hello world"
+
+foreign export ccall "Java_org_haskell_HaskellActivity_onCreateHS" onCreate :: JNIEnv -> JObject -> JObject -> IO ()
+onCreate :: JNIEnv -> JObject -> JObject -> IO ()
+onCreate env activity _bundle = helloWorld

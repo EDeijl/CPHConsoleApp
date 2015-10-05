@@ -35,7 +35,7 @@ echo
 echo Copying config file
 echo
 
-cp $IOS_SCRIPTS/HaskelliOS.xcconfig $XCODE_PROJECT_BUILD_DIR/
+cp HaskelliOS.xcconfig $XCODE_PROJECT_BUILD_DIR/
 
 
 echo

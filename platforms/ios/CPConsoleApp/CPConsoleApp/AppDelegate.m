@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "lib/Counter_stub.h"
+#import "lib/Main_stub.h"
 
 
 @interface AppDelegate ()
@@ -18,8 +18,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    startCounter(3);
     // Override point for customization after application launch.
+    helloWorld();
     return YES;
 }
 
