@@ -15,7 +15,6 @@ public class HaskellActivity extends Activity {
 
     }
 
-    public native void onCreateHS(Bundle savedInstanceState) {
-        static { System.loadLibrary("haskell"); }
-    }
+    public native void onCreateHS(Bundle savedInstanceState);
+    static { System.loadLibrary("haskell"); }
 }
