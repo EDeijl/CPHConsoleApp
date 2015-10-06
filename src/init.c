@@ -1,7 +1,7 @@
 #include <jni.h>
 #include <HsFFI.h>
 
-extern void hs_set_java_vm(HSPtr a1);
+extern void hs_set_java_vm(HsPtr a1);
 extern void __stginit_Counter(void);
 
 JNIEXPORT jint JNICALL JNI_HelloWorld( JavaVM *vm, void *pvt ) {
