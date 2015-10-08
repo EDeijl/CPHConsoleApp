@@ -13,14 +13,16 @@
     <exec executable="arm-linux-androideabi-cabal" failonerror="true">
       <arg value="configure" />
       <arg value="--builddir=obj/local/armeabi" />
+      <arg value="-fandroid" />
     </exec>
   </target>
 
   <target name="-post-compile" depends="cabal-armeabi-configure">
 
     <exec executable="arm-linux-androideabi-cabal" failonerror="true">
-      <arg value="build" />
+      <arg value="install" />
       <arg value="--builddir=obj/local/armeabi" />
+      <arg value="-fandroid" />
     </exec>
 
     <exec executable="${ndk.dir}/ndk-build" failonerror="true"/>
