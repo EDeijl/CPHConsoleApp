@@ -37,29 +37,24 @@ library
      cc-options:          -DANDROID
      ghc-options:         -O2 -static -no-hs-main -threaded -optl-shared
      Buildable:           True
-     build-depends:       base >= 4.7
+     build-depends:       base >= 4.7, foreign-jni
      c-sources:           src/init.c
 
 executable             libCPConsoleApp.so
   build-depends:       base >=4.7, foreign-jni
   hs-source-dirs:      src
   default-language:    Haskell2010
-  ghc-options:         -optl-shared -no-hs-main -threaded
+  ghc-options:         -shared -no-hs-main -threaded
   main-is:             Main.hs
   c-sources:           src/init.c
   include-dirs:        src
-  cc-options:          -shared
-  ld-options:          -shared
+  --cc-options:          -shared
+  --ld-options:          -shared
   if flag(android)
      Buildable:           True
   else
      Buildable:           False
                           
-                       
-                      
-                        
-
-     
 executable             CPConsoleAppStaticLib
   hs-source-dirs:        src
   default-language:      Haskell2010
@@ -88,8 +83,3 @@ executable           CPConsoleApp
      Buildable: False
   else
     Buildable: True
-                      
-
-
-
-
