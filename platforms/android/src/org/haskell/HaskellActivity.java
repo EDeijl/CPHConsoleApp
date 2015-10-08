@@ -12,6 +12,6 @@ public class HaskellActivity extends Activity
         onCreateHS(this, savedInstanceState);
     }
 
-    public native void onCreateHS();
+    public native void onCreateHS(Activity activity, Bundle bundle);
     static { System.loadLibrary("hw-prebuilt"); }
 }
