@@ -8,4 +8,4 @@ cp CPConsoleApp.cabal platforms/android/
 cp src/* platforms/android/src/
 
 cd platforms/android
-cabal build exe:libCPConsoleApp.so -fandroid
+ant debug
