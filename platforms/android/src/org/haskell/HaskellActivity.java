@@ -13,5 +13,5 @@ public class HaskellActivity extends Activity
     }
 
     public native void helloWorld();
-    static { System.loadLibrary("haskell"); }
+    static { System.loadLibrary("CPConsoleApp"); }
 }

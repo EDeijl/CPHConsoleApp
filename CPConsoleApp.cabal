@@ -78,4 +78,4 @@ executable           CPConsoleApp
   if flag(ios) || flag(android)
      Buildable: False
   else
-    Buildable: True
+    Buildable: False
