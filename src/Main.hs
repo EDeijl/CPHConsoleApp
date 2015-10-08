@@ -1,5 +1,5 @@
 {-# LANGUAGE ForeignFunctionInterface #-}
-module Counter where
+module HaskellActivity where
 import Foreign.JNI
 import Foreign.JNI.Lookup
 
