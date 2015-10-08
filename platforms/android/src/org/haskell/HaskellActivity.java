@@ -9,9 +9,9 @@ public class HaskellActivity extends Activity
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        onCreateHS(this, savedInstanceState);
+        onCreateHS(savedInstanceState);
     }
 
-    public native void onCreateHS(Activity activity, Bundle bundle);
+    public native void onCreateHS(Bundle savedInstanceState);
     static { System.loadLibrary("hw-prebuilt"); }
 }
