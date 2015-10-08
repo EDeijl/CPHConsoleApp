@@ -5,7 +5,7 @@ extern void hs_set_java_vm(HsPtr a1);
 extern void __stginit_Counter(void);
 
 JNIEXPORT jint JNICALL JNI_OnLoad( JavaVM *vm, void *pvt ) {
-  static char *argv[] = { "libCPConsoleApp.so", 0}, **argv_ =argv;
+  static char *argv[] = { "hw-prebuilt.so", 0}, **argv_ =argv;
   static int argc = 1;
 
   hs_init(&argc, &argv_);
