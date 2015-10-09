@@ -94,3 +94,11 @@ build/
 
 #NDK
 obj/
+a.out
+platforms/android/src/Main.hs
+platforms/android/src/init.c
+platforms/android/CPConsoleApp.cabal
+platforms/android/LICENSE
+platforms/android/libs
+
+
