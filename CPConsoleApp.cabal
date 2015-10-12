@@ -37,27 +37,33 @@ library
      cc-options:          -DANDROID
      ghc-options:         -O2 -static -no-hs-main -threaded -optl-shared
      Buildable:           True
-     build-depends:       base >= 4.7, foreign-jni
+     build-depends:       base >= 4.7 
      c-sources:           src/init.c
 
                           
 executable             libhaskell.so
-  build-depends:       base >=4.7, foreign-jni
+  build-depends:       base >=4.7 
+  if flag (android)
+     build-depends:    base >=4.7, foreign-jni
   hs-source-dirs:      src
   default-language:    Haskell2010
   ghc-options:         -optl-shared -no-hs-main -threaded
-  main-is:             Main.hs
+  main-is:             AndroidMain.hs
   c-sources:           src/init.c
   include-dirs:        src
   cc-options:          -shared
   ld-options:          -shared
-
+  if flag(android)
+     Buildable: True
+  else
+     Buildable: False
+    
 executable             CPConsoleAppStaticLib
   hs-source-dirs:        src
   default-language:      Haskell2010
   ghc-options:           -staticlib -threaded -no-hs-main -pgmlibtool libtool -stubdir .
   cpp-options:           -DIOS
-  main-is:               Main.hs
+  main-is:               iOSMain.hs
 
   build-depends: base
   if flag(ios)
