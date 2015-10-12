@@ -13,5 +13,5 @@ public class HaskellActivity extends Activity
     }
 
     public native void onCreateHS(Bundle savedInstanceState);
-    static { System.loadLibrary("hw-prebuilt"); }
+    static { System.loadLibrary("haskell"); }
 }
