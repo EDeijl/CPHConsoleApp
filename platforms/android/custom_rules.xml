@@ -12,6 +12,7 @@
   <target name="cabal-armeabi-configure" unless="cabal-armeabi-configure.notRequired">
     <exec executable="arm-linux-androideabi-cabal" failonerror="true">
       <arg value="configure" />
+      <arg value="-fandroid" />
       <arg value="--builddir=obj/local/armeabi" />
     </exec>
   </target>
@@ -20,6 +21,7 @@
 
     <exec executable="arm-linux-androideabi-cabal" failonerror="true">
       <arg value="build" />
+      <arg value="-fandroid" />
       <arg value="--builddir=obj/local/armeabi" />
     </exec>
 
