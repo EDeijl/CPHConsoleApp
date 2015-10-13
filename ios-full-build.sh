@@ -2,6 +2,12 @@
 #
 # This script build for iOS on all 3 architectures and then copies each version of the
 # static library to XCode
+if !  [ -d ghc-ios-scripts ]
+   echo "the ghc-ios scripts are not installed, please run git submodule update"
+   exit 1
+fi
+source settings.env
+
 if [ "$IOS_SCRIPTS" = "" -o "$XCODE_PROJECT_BUILD_DIR" = "" ]; then
     echo "Either IOS_SCRIPTS or XCODE_PROJECT_BUILD_DIR is not set"
     exit 1

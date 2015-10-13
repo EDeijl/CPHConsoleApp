@@ -1,0 +1,3 @@
+[submodule "ghc-ios-scripts"]
+	path = ghc-ios-scripts
+	url = https://github.com/ghc-ios/ghc-ios-scripts.git
