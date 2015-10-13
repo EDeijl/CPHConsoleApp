@@ -18,7 +18,7 @@ first make sure that __jobs: $ncpus__ is disabled in ~/.cabal/config (you can co
 ## usage
 ### iOS 
 Run `./ios-full-build.sh`
-This will build the project and generate the necessary `.a` and `.h` files in the XCode project directory.
+This will build the project and generate the necessary `.a` and `.h` files in the XCode project directory (found in platforms/ios/.
 Open the XCode project and check if there is a lib directory in your project with a 'HaskellActivity_stub.h' and a `CPConsoleAppStaticLib.a` file in it. (It is fine if it also exists in the root of the project).
 
 If the library and header files aren't there, click file -> Add files to project, select the `lib` folder and make sure the check next to Add to targets is enabled (if you don't see Add to target, click options on the bottom of the file chooser).
