@@ -9,7 +9,7 @@ Cross Platform Haskell console application that outputs Hello World on iOS and A
 - The android platform tools for easy installation of the `.apk` file
 
 ## installation
-first make sure that __jobs: $ncpus__ is disabled in ~/.cabal/config (you can comment it out like `--jobs: $ncpus`)
+First make sure that __jobs: $ncpus__ is disabled in `~/.cabal/config` (you can comment it out like `--jobs: $ncpus`)
 
     $ git clone --recursive https://github.com/EDeijl/CPCHonsoleApp.git
     $ cd CPHConsoleApp
@@ -18,12 +18,12 @@ first make sure that __jobs: $ncpus__ is disabled in ~/.cabal/config (you can co
 ## usage
 ### iOS 
 Run `./ios-full-build.sh`
-This will build the project and generate the necessary `.a` and `.h` files in the XCode project directory (found in platforms/ios/.
-Open the XCode project and check if there is a lib directory in your project with a 'HaskellActivity_stub.h' and a `CPConsoleAppStaticLib.a` file in it. (It is fine if it also exists in the root of the project).
+This will build the project and generate the necessary `.a` and `.h` files in the XCode project directory (found in `platforms/ios`.
+Open the XCode project and check if there is a lib directory in your project with a `HaskellActivity_stub.h` and a `CPConsoleAppStaticLib.a` file in it. (It is fine if it also exists in the root of the project).
 
 If the library and header files aren't there, click file -> Add files to project, select the `lib` folder and make sure the check next to Add to targets is enabled (if you don't see Add to target, click options on the bottom of the file chooser).
 
-In the `HaskelliOS.xcconfig` (Also in the XCode project folder) check that the `HEADER_SEARCH_PATHS` variable is set to the `include` folder of your GHC installation, otherwise xcode is not able to compile the project.
+In the `HaskelliOS.xcconfig` (Also in the XCode project folder) check that the `HEADER_SEARCH_PATHS` variable is set to the `include` folder of your GHC installation, otherwise Xcode is not able to compile the project.
 
 If everything went correctly, you can now run the application on a device, and in the terminal output it will say "Hello World!"
 
@@ -46,9 +46,9 @@ Now we know the name of the container and can copy the .apk file to our local ma
 
     docker cp jovial_archimedes:/home/androidbuilder/build/CPConsoleApp/platforms/android/bin/HaskellActivity-debug.apk .
 
-now that we have the `.apk` on our local machine, we can install it on a device with `adb install -r HaskellActivity-debug.apk`.
+Now that we have the `.apk` on our local machine, we can install it on a device with `adb install -r HaskellActivity-debug.apk`.
 
 
 ## Made possible by
-- CJ van den Berg his work on [ghc-android](https://github.com/neurocyte/ghc-android), [android-haskell-activity](https://github.com/neurocyte/android-haskell-activity) and [foreign-jni](https://github.com/neurocyte/foreign-jni).
+- CJ van den Berg with his work on [ghc-android](https://github.com/neurocyte/ghc-android), [android-haskell-activity](https://github.com/neurocyte/android-haskell-activity) and [foreign-jni](https://github.com/neurocyte/foreign-jni).
 - Sean Seefried for his work on the [docker image for android builds](https://github.com/sseefried/docker-build-ghc-android) and the iOS build scripts in the [Epidemic](https://github.com/sseefried/open-epidemic-game) game.
