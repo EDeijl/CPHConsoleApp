@@ -11,8 +11,8 @@ Cross Platform Haskell console application that outputs Hello World on iOS and A
 ## installation
 first make sure that __jobs: $ncpus__ is disabled in ~/.cabal/config (you can comment it out like `--jobs: $ncpus`)
 
-    $ git clone --recursive https://github.com/EDeijl/CPCConsoleApp.git
-    $ cd CPCConsoleApp
+    $ git clone --recursive https://github.com/EDeijl/CPCHonsoleApp.git
+    $ cd CPHConsoleApp
     $ ./setup.sh # will install ghc-ios dependencies and set up the docker machine for Android builds
 
 ## usage
@@ -31,7 +31,7 @@ If everything went correctly, you can now run the application on a device, and i
 For the Android build we make use of a Docker image that has all the dependencies for this project installed.
 The `setup.sh` script that you executed on installation built the docker image, and all we have to do is connect to a container and build the apk.
 
-    erik@localhost:../CPCConsoleApp $ docker run -it android_build_env /bin/bash
+    erik@localhost:../CPHConsoleApp $ docker run -it android_build_env /bin/bash
     androidbuilder@c2f82ac851a1:~/build $ cd CPConsoleApp
     androidbuilder@c2f82ac851a1:~/build $ ./build-android.sh
 
