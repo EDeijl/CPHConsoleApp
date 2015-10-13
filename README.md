@@ -1,4 +1,4 @@
-# CPCConsoleApp
+# CPHConsoleApp
 Cross Platform Haskell console application that outputs Hello World on iOS and Android.
 
 ## prerequisites
