@@ -23,7 +23,7 @@ Open the XCode project and check if there is a lib directory in your project wit
 
 If the library and header files aren't there, click file -> Add files to project, select the `lib` folder and make sure the check next to Add to targets is enabled (if you don't see Add to target, click options on the bottom of the file chooser).
 
-In the `HaskelliOS.xcconfig` check that the `HEADER_SEARCH_PATHS` variable is set to the `include` folder of your GHC installation, otherwise xcode is not able to compile the project.
+In the `HaskelliOS.xcconfig` (Also in the XCode project folder) check that the `HEADER_SEARCH_PATHS` variable is set to the `include` folder of your GHC installation, otherwise xcode is not able to compile the project.
 
 If everything went correctly, you can now run the application on a device, and in the terminal output it will say "Hello World!"
 
