@@ -24,7 +24,7 @@ onCreate env activity _bundle = runJNISafe () env $ do
   msg <- liftIO $ do
     getNumProcessors >>= setNumCapabilities
     caps <- getNumCapabilities
-    return $ helloWorld ++ "\nRunning on " `append` pack (show caps) `append` " CPUs!"
+    return $ pack helloWorld  `append` "\nRunning on " `append` pack (show caps) `append` " CPUs!"
 
   activityClass <- getObjectClass activity
   tv <- textView_new activity
