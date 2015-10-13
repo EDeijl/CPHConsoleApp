@@ -1,3 +1,6 @@
 [submodule "ghc-ios-scripts"]
 	path = ghc-ios-scripts
 	url = https://github.com/ghc-ios/ghc-ios-scripts.git
+[submodule "basic-hs-android-docker"]
+	path = basic-hs-android-docker
+	url = https://github.com/EDeijl/basic-hs-android-docker.git
