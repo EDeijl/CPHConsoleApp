@@ -24,8 +24,14 @@ Flag android
       Description:         Build for Android
       Default:             False
 
+Flag desktop
+     Description:         Build for Desktop
+     Default:             False
+
 executable             libhaskell.so
-  build-depends:       base >=4.7, foreign-jni, transformers, text
+  build-depends:       base >=4.7 
+  if flag(android)
+    build-depends:       base >=4.7, foreign-jni, transformers, text
   hs-source-dirs:      src
   default-language:    Haskell2010
   ghc-options:         -optl-shared -no-hs-main -threaded
@@ -34,15 +40,16 @@ executable             libhaskell.so
   include-dirs:        src
   cc-options:          -shared
   ld-options:          -shared
+  if flag(ios)
+     Buildable: False
     
 executable             CPConsoleAppStaticLib
+  build-depends:         base
   hs-source-dirs:        src
   default-language:      Haskell2010
   ghc-options:           -staticlib -threaded -no-hs-main -pgmlibtool libtool -stubdir .
   cpp-options:           -DIOS
   main-is:               iOSMain.hs
-
-  build-depends: base
   if flag(ios)
      Buildable: True
   else
@@ -62,4 +69,4 @@ executable           CPConsoleApp
   if flag(ios) || flag(android)
      Buildable: False
   else
-    Buildable: False
+    Buildable: True

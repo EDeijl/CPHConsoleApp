@@ -14,8 +14,8 @@
 		7A0EE11E1BBD15AF0010104A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A0EE11D1BBD15AF0010104A /* Assets.xcassets */; };
 		7A0EE1211BBD15AF0010104A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A0EE11F1BBD15AF0010104A /* LaunchScreen.storyboard */; };
 		7A0EE12B1BBD2CE80010104A /* HaskelliOS.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 7A0EE12A1BBD2CE80010104A /* HaskelliOS.xcconfig */; settings = {ASSET_TAGS = (); }; };
-		7A8DF9ED1BBD3EA9009FBF6D /* lib in Resources */ = {isa = PBXBuildFile; fileRef = 7A8DF9EC1BBD3EA9009FBF6D /* lib */; settings = {ASSET_TAGS = (); }; };
-		7A8DF9F11BBD4EAF009FBF6D /* CPConsoleAppStaticLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A8DF9F01BBD4EAF009FBF6D /* CPConsoleAppStaticLib.a */; };
+		7A6C81191BCCF2E6006161A4 /* lib in Resources */ = {isa = PBXBuildFile; fileRef = 7A6C81181BCCF2E6006161A4 /* lib */; settings = {ASSET_TAGS = (); }; };
+		7A6C811B1BCCF312006161A4 /* CPConsoleAppStaticLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A6C811A1BCCF312006161A4 /* CPConsoleAppStaticLib.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +30,8 @@
 		7A0EE1201BBD15AF0010104A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A0EE1221BBD15AF0010104A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A0EE12A1BBD2CE80010104A /* HaskelliOS.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = HaskelliOS.xcconfig; path = CPConsoleApp/HaskelliOS.xcconfig; sourceTree = "<group>"; };
-		7A8DF9EC1BBD3EA9009FBF6D /* lib */ = {isa = PBXFileReference; lastKnownFileType = folder; name = lib; path = CPConsoleApp/lib; sourceTree = "<group>"; };
-		7A8DF9F01BBD4EAF009FBF6D /* CPConsoleAppStaticLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = CPConsoleAppStaticLib.a; path = CPConsoleApp/lib/CPConsoleAppStaticLib.a; sourceTree = "<group>"; };
+		7A6C81181BCCF2E6006161A4 /* lib */ = {isa = PBXFileReference; lastKnownFileType = folder; name = lib; path = CPConsoleApp/lib; sourceTree = "<group>"; };
+		7A6C811A1BCCF312006161A4 /* CPConsoleAppStaticLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = CPConsoleAppStaticLib.a; path = CPConsoleApp/lib/CPConsoleAppStaticLib.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,7 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A8DF9F11BBD4EAF009FBF6D /* CPConsoleAppStaticLib.a in Frameworks */,
+				7A6C811B1BCCF312006161A4 /* CPConsoleAppStaticLib.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,8 +49,8 @@
 		7A0EE1051BBD15AF0010104A = {
 			isa = PBXGroup;
 			children = (
-				7A8DF9F01BBD4EAF009FBF6D /* CPConsoleAppStaticLib.a */,
-				7A8DF9EC1BBD3EA9009FBF6D /* lib */,
+				7A6C811A1BCCF312006161A4 /* CPConsoleAppStaticLib.a */,
+				7A6C81181BCCF2E6006161A4 /* lib */,
 				7A0EE12A1BBD2CE80010104A /* HaskelliOS.xcconfig */,
 				7A0EE1101BBD15AF0010104A /* CPConsoleApp */,
 				7A0EE10F1BBD15AF0010104A /* Products */,
@@ -148,7 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A0EE1211BBD15AF0010104A /* LaunchScreen.storyboard in Resources */,
-				7A8DF9ED1BBD3EA9009FBF6D /* lib in Resources */,
+				7A6C81191BCCF2E6006161A4 /* lib in Resources */,
 				7A0EE11E1BBD15AF0010104A /* Assets.xcassets in Resources */,
 				7A0EE12B1BBD2CE80010104A /* HaskelliOS.xcconfig in Resources */,
 				7A0EE11C1BBD15AF0010104A /* Main.storyboard in Resources */,

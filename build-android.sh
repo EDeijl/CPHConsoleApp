@@ -9,12 +9,12 @@ cp LICENSE platforms/android/
 cp src/* platforms/android/src/
 
 cd platforms/android
-sed -i -e '31s/-optl-shared/-shared/g' CPConsoleApp.cabal
-sed -i -e '35s/cc-options/--cc-options/g' CPConsoleApp.cabal
-sed -i -e '36s/ld-options/--ld-options/g' CPConsoleApp.cabal
+sed -i -e '37s/-optl-shared/-shared/g' CPConsoleApp.cabal
+sed -i -e '41s/cc-options/--cc-options/g' CPConsoleApp.cabal
+sed -i -e '42s/ld-options/--ld-options/g' CPConsoleApp.cabal
 ant debug
 
-sed -i -e '31s/\-shared/-optl-shared/g' CPConsoleApp.cabal
-sed -i -e '35s/\--cc-options/cc-options/g' CPConsoleApp.cabal
-sed -i -e '36s/\--ld-options/ld-options/g' CPConsoleApp.cabal
+sed -i -e '37s/\-shared/-optl-shared/g' CPConsoleApp.cabal
+sed -i -e '41s/\--cc-options/cc-options/g' CPConsoleApp.cabal
+sed -i -e '42s/\--ld-options/ld-options/g' CPConsoleApp.cabal
 ant debug

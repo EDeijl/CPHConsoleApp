@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "lib/Main_stub.h"
+#import "lib/HaskellActivity_stub.h"
 
 
 @interface AppDelegate ()
@@ -19,7 +19,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    helloWorld();
+    onCreate();
     return YES;
 }
 

@@ -101,4 +101,5 @@ platforms/android/CPConsoleApp.cabal
 platforms/android/LICENSE
 platforms/android/libs
 
-
+#XCODE lib dir
+platforms/ios/lib/CPConsoleApp/CPConsoleApp/lib
