@@ -1,21 +1,21 @@
 # CPHConsoleApp
 Cross Platform Haskell console application that outputs Hello World on iOS and Android.
 
-## prerequisites
+## Prerequisites
 - a machine with OS X installed.
 - Xcode
 - Docker
 - GHC and Cabal
 - The android platform tools for easy installation of the `.apk` file
 
-## installation
+## Installation
 First make sure that __jobs: $ncpus__ is disabled in `~/.cabal/config` (you can comment it out like `--jobs: $ncpus`)
 
     $ git clone --recursive https://github.com/EDeijl/CPCHonsoleApp.git
     $ cd CPHConsoleApp
     $ ./setup.sh # will install ghc-ios dependencies and set up the docker machine for Android builds
 
-## usage
+## Usage
 ### iOS 
 Run `./ios-full-build.sh`
 This will build the project and generate the necessary `.a` and `.h` files in the XCode project directory (found in `platforms/ios`.
