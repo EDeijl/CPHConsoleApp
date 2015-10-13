@@ -2,7 +2,6 @@
 
 # iOS Configuration
 if [[ $(uname ) == 'Darwin' ]] ; then
-   git submodules update
    (cd ghc-ios-scripts; ./installGHCiOS.sh)
 fi
 
