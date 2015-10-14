@@ -24,7 +24,7 @@ First make sure to have `jobs: $ncpus` commented out in `~/.cabal/config`.
 
 Then run the following commands:
 
-    git clone --recursive https://github.com/EDeijl/CPCHonsoleApp.git
+    git clone --recursive https://github.com/EDeijl/CPHConsoleApp.git
     cd CPHConsoleApp
     ./setup.sh
 
