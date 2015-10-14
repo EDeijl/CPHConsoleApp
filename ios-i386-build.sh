@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# This script build for iOS on all 3 architectures and then copies each version of the
+# This script build for i386 iOS and then copies the
 # static library to XCode
 
 ARCH_OS=i386-apple-darwin11

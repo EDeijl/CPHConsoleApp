@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# This script build for iOS on all 3 architectures and then copies each version of the
+# This script build for aarch64 iOS and then copies the
 # static library to XCode
 ARCH_OS=aarch64-apple-darwin14
 ARCH=aarch64
@@ -10,6 +10,9 @@ if [ "$IOS_SCRIPTS" = "" -o "$XCODE_PROJECT_BUILD_DIR" = "" ]; then
 fi
 
 
+#
+# Configure the project for ios builds
+# 
 $ARCH_OS-cabal configure -fios $@ && \
     $ARCH_OS-cabal build exe:CPConsoleAppStaticLib
 [ $? -eq 0 ] || exit 1
