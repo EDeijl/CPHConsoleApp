@@ -50,26 +50,14 @@ Xcode should now be able to build and run the project. If all went well, the app
 For the Android build we make use of a Docker image that has all the dependencies for this project installed.
 The `setup.sh` script has already prepared this docker image for us. 
 
-By the following command we start a container and drop is into a shell running inside of it:
+With the following commands we start a container, build the `.apk` file, copy it to our host machine and remove the container so it will not conflict with the next build.
 
-    docker run -it android_build_env /bin/bash
+    docker run --name apkbuilder -a stdout -a stdin android_build_env \
+        /bin/bash -cl "cd CPConsoleApp; ./build-android.sh"
+    docker cp \
+        apkbuilder:/home/androidbuilder/build/CPConsoleApp/platforms/android/bin/HaskellActivity-debug.apk .
+    docker rm apkbuilder
     
-With these commands you build an `.apk` file:
-
-    cd CPConsoleApp && ./build-android-package.sh
-
-# TODO: see if this can be made more simple by not dropping into the shell 
-
-
-In another terminal shell on your own machine run `docker ps` it will return something like this:
-
-    CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
-    58d6fbb02800        android_build_env   "/bin/bash"         4 seconds ago       Up 4 seconds                            jovial_archimedes
-
-Now we know the name of the container and can copy the `.apk` file to our local machine.
-
-    docker cp jovial_archimedes:/home/androidbuilder/build/CPConsoleApp/platforms/android/bin/HaskellActivity-debug.apk .
-
 Now that we have the `.apk` on our local machine, we can install it on a device with `adb install -r HaskellActivity-debug.apk`. If a device is attached it will install the package there, otherwise it will try to run an emulator.
 
 
