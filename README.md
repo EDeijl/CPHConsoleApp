@@ -20,7 +20,9 @@ For Android:
 
 ## Installation
 
-First make sure that `jobs: $ncpus` is disabled in `~/.cabal/config` (you can comment it out like `--jobs: $ncpus`)
+First make sure to have `jobs: $ncpus` commented out in `~/.cabal/config`.
+
+Then run the following commands:
 
     git clone --recursive https://github.com/EDeijl/CPCHonsoleApp.git
     cd CPHConsoleApp
