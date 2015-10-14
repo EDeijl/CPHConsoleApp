@@ -40,7 +40,7 @@ executable             libhaskell.so
   include-dirs:        src
   cc-options:          -shared
   ld-options:          -shared
-  if flag(ios)
+  if flag(ios) || flag(desktop)
      Buildable: False
     
 executable             CPConsoleAppStaticLib
@@ -60,7 +60,7 @@ executable           CPConsoleApp
   default-language:    Haskell2010
   ghc-options:         -W -threaded -O2
   ghc-prof-options:    -prof -auto-all
-  main-is:             Main.hs
+  main-is:             DesktopMain.hs
   hs-source-dirs:      .
   build-depends: base
   if flag(ios)

@@ -60,6 +60,8 @@ With the following commands we start a container, build the `.apk` file, copy it
     
 Now that we have the `.apk` on our local machine, we can install it on a device with `adb install -r HaskellActivity-debug.apk`. If a device is attached it will install the package there, otherwise it will try to run an emulator.
 
+#### Desktop
+For desktop builds just run `cabal configure -fdesktop` and `cabal build` to generate an executable.
 
 ## Credits
 
