@@ -1,26 +1,26 @@
 # CPHConsoleApp
 
-Cross Platform Haskell Console Application that outputs `Hello World` on iOS, Android and Desktop.
+Cross Platform Haskell Console Application that outputs `Hello World` on iOS, Android and Desktop. This is merely a proof-of-concept, showing how to target several platforms from a single Haskell codebase.
 
 
 ## Prerequisites
 
 For all platforms:
-- GHC
-- Cabal
+- GHC (tested with 7.10.2)
+- Cabal (tested with 1.22.6)
 
 For iOS:
-- Machine with OSX installed
-- Xcode
+- Machine with OSX installed (tested on El Capitan)
+- Xcode (tested with 7.0.1)
 
 For Android:
-- Docker
+- Docker (1.6 or greater is required)
 - The android platform tools for easy installation of the `.apk` file
 
 
 ## Installation
 
-First make sure that __jobs: $ncpus__ is disabled in `~/.cabal/config` (you can comment it out like `--jobs: $ncpus`)
+First make sure that `jobs: $ncpus` is disabled in `~/.cabal/config` (you can comment it out like `--jobs: $ncpus`)
 
     git clone --recursive https://github.com/EDeijl/CPCHonsoleApp.git
     cd CPHConsoleApp
